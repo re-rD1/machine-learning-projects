@@ -1,5 +1,10 @@
 # Bank Marketing Campaign Prediction
 
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Scikit--learn](https://img.shields.io/badge/Scikit--learn-1.9.1-orange?logo=scikitlearn)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit)
+![Model](https://img.shields.io/badge/Model-Gradient%20Boosting-success)
+
 ## Project Overview
 
 This project develops a machine learning classification model to predict whether a bank customer will subscribe to a term deposit, using customer profile information and previous campaign history available before a new marketing campaign.
@@ -11,6 +16,26 @@ The goal is to support more informed campaign planning by helping identify custo
 Bank marketing campaigns involve contacting potential customers, but not every customer will subscribe to the offered term deposit. A predictive model can help the bank prioritize its outreach efforts.
 
 **Target variable:** `deposit` (Yes / No)
+
+## Features & Input Attributes
+
+The final model uses **9 features**. The Streamlit app asks users to enter 7 customer/history attributes and automatically derives the remaining 2 features.
+
+| Feature | Description | App input |
+|---|---|---|
+| `age` | Customer's age in years | Manual input |
+| `job` | Customer's occupation category | Manual selection |
+| `balance` | Customer's account balance | Manual input |
+| `housing` | Whether the customer has a housing loan (`yes`/`no`) | Manual selection |
+| `loan` | Whether the customer has a personal loan (`yes`/`no`) | Manual selection |
+| `pdays` | Days since the customer was last contacted in a previous campaign; `-1` means no previous contact | Manual input |
+| `poutcome` | Outcome of the previous marketing campaign | Manual selection |
+| `age_group` | Age category derived automatically from `age` | Automatically generated |
+| `previously_contacted` | Indicates previous contact: `no` when `pdays = -1`, otherwise `yes` | Automatically generated |
+
+**Age group categories:** Young Adult, Adult, Middle Adult, Mature Adult, Senior, and Elderly.
+
+The target variable `deposit` is used for model training and evaluation; it is not an input feature in the prediction app.
 
 ## Workflow
 
@@ -41,6 +66,14 @@ The final model selected during validation was **Gradient Boosting**, using a de
 | ROC AUC | 0.7402 |
 
 **Evaluation limitation:** The test set had also been used in earlier experiments with a different feature configuration. Therefore, these results should not be interpreted as coming from a completely untouched independent holdout.
+
+## Streamlit App Features
+
+- Enter customer profile and previous campaign information through an interactive form.
+- Automatically generate `age_group` and `previously_contacted`.
+- Display the estimated subscription probability.
+- Apply the saved decision threshold of **0.40** to produce a Yes/No prediction.
+- Show the model threshold and number of input features.
 
 ## Project Files
 
