@@ -75,6 +75,11 @@ The final model selected during validation was **Gradient Boosting**, using a de
 - Apply the saved decision threshold of **0.40** to produce a Yes/No prediction.
 - Show the model threshold and number of input features.
 
+## Presentation
+
+- **Presentation slides:** Bank Marketing Campaign Capstone Project (PowerPoint deck). The PPT file will be added to this project folder.
+- **Presentation video:** [Watch the project presentation on YouTube](https://youtu.be/9kcfu-9PJ3Y).
+
 ## Project Files
 
 - `BankMarketingCamp_Caps3_RayhanAkmal.ipynb` — analysis, feature engineering, model comparison, tuning, evaluation, and model saving.
