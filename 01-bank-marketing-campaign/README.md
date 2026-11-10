@@ -77,7 +77,7 @@ The final model selected during validation was **Gradient Boosting**, using a de
 
 ## Presentation
 
-- **Presentation slides:** Bank Marketing Campaign Capstone Project (PowerPoint deck). The PPT file will be added to this project folder.
+- **Presentation slides:** [View or download the Bank Marketing Campaign presentation (PPTX)](./PPT%20Bank%20Marketing%20Campaign.pptx).
 - **Presentation video:** [Watch the project presentation on YouTube](https://youtu.be/9kcfu-9PJ3Y).
 
 ## Project Files
@@ -107,7 +107,7 @@ The app accepts customer profile and previous campaign information, derives `age
 
 ## Dataset
 
-The dataset is not included in this repository. Add the original dataset source and access instructions here before reproducing the notebook. The notebook expects the CSV file to be named `data_bank_marketing_campaign.csv` in its working directory.
+The dataset is included in this project folder as `data_bank_marketing_campaign.csv`. The notebook expects this filename in its working directory.
 
 ## Tools & Technologies
 
