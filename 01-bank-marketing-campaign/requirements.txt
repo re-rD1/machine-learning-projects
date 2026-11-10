@@ -1,0 +1,10 @@
+# Runtime and notebook dependencies
+streamlit
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn==1.9.1
+xgboost
+shap
+joblib
